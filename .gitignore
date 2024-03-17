@@ -1,0 +1,19 @@
+# Ignore compiled files
+*.o
+*.out
+
+# Ignore SystemVerilog compilation output
+*.vstf
+*.vst
+*.vout
+*.vcd
+*.vpd
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore any other build output or temporary files
+build/
+temp/
+*.log
