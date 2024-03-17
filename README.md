@@ -10,6 +10,7 @@ The Optimized Chebyshev Design algorithm is utilized for the design of digital f
 
 1. **Software Simulations**
    - `chebyshev_design.py`: Python code for simulating the Optimized Chebyshev Design algorithm in software environment.
+   - `chebyshev_design.c`: C code for simulating the Optimized Chebyshev Design algorithm in software environment.
 
 2. **Hardware Implementation**
    - `chebyshev_design.sv`: SystemVerilog code implementing the Optimized Chebyshev Design algorithm for hardware implementation.
