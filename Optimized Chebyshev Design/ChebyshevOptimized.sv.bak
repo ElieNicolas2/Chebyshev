@@ -1,3 +1,0 @@
-module ChebyshevOptimized #(parameter logic [17:0] coeff [0:4] '{18'H0800, 18'H0299, 18'H0000, 18'Hfff6, 18'H0000})
-(input logic [17:0] xin, input logic clk, async, output logic [17:0] yout);
-
