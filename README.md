@@ -1,6 +1,6 @@
-# Optimized Chebyshev Design Repository
+# Chebyshev Approximation Technique Design Repository
 
-This repository contains SystemVerilog code for hardware implementation and Python code for software simulations of the Optimized Chebyshev Design algorithm.
+This repository contains Python code for software simulation/coefficient generation and SystemVerilog code for hardware implementation of the Chebyshev Approximation Technique Design algorithm.
 
 ## Overview
 
@@ -13,7 +13,6 @@ The Optimized Chebyshev Design algorithm is utilized for the design of digital f
 
 2. **Hardware Implementation**
    - `chebyshev_design.sv`: SystemVerilog code implementing the Optimized Chebyshev Design algorithm for hardware implementation.
-
 
 ## Usage
 
