@@ -18,7 +18,28 @@ The Optimized Chebyshev Design algorithm is utilized for the design of digital f
 ## Usage
 
 ### Software Simulations
-To perform software simulations, ensure you have Python installed along with the necessary libraries (e.g., NumPy). Import `cheby.py` to execute the software simulation. Use the fit function followed by the asTaylor function to obtain the coefficients. Next, used the `float2fixed.py` with the generated coefficients to obtain them in hexadecimal format to be inputted to `ChebyshevOptimized.sv`. Modify the script as needed to adjust parameters and analyze results.
+To perform software simulations, ensure you have Python installed along with the necessary libraries (e.g., NumPy). Import `cheby.py` to execute the software simulation. Use the fit function followed by the asTaylor function to obtain the coefficients as shown:
+
+
+```Python
+import cheby
+import numpy as np
+
+# Define the function which you want to approximate
+def cos(a):
+    return np.cos(a)
+    
+# Use the fit function: fit(function, a, b, degree of approximation)
+c = cheby.Cheby.fit(cos, 0, 1, 4)
+
+# AsTaylor function outputs the Chebyshev coefficients as 
+# [a0, a1, a2, a3, a4] -> a0 + a1x + a2x^2 + a3x^3 + a4x^4 
+coef = cheby.Cheby.asTaylor(c)
+
+print(coef)
+```
+
+Next, used the `float2fixed.py` with the generated coefficients to obtain them in hexadecimal format to be inputted to `ChebyshevOptimized.sv`. Modify the script as needed to adjust parameters and analyze results.
 
 ### Hardware Implementation
 To use the hardware implementation, you need a SystemVerilog compiler and a hardware description language (HDL) compatible toolchain. Simply include `ChebyshevOptimized.sv` in your project and instantiate the module as required. We also included top_level files.
