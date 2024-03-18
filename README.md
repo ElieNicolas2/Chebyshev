@@ -9,19 +9,19 @@ The Optimized Chebyshev Design algorithm is utilized for the design of digital f
 ## Contents
 
 1. **Software Simulations**
-   - `chebyshev_design.py`: Python code for simulating the Optimized Chebyshev Design algorithm in software environment.
-   - `chebyshev_design.c`: C code for simulating the Optimized Chebyshev Design algorithm in software environment.
+   - `cheby.py`: Python module for simulating the chebyshev algorithm in software environment which can be imported and used to find the Chebyshev Coefficients.
+   - `Chebyshev.c`: Alternative C code for the same purpose.
 
 2. **Hardware Implementation**
-   - `chebyshev_design.sv`: SystemVerilog code implementing the Optimized Chebyshev Design algorithm for hardware implementation.
+   - `ChebyshevOptimized.sv`: SystemVerilog code implementing the Optimized Chebyshev Design in hardware in which we input the coeffients as parameter logic.
 
 ## Usage
 
 ### Software Simulations
-To perform software simulations, ensure you have Python installed along with the necessary libraries (e.g., NumPy). Run `chebyshev_design.py` to execute the software simulation. Modify the script as needed to adjust parameters and analyze results.
+To perform software simulations, ensure you have Python installed along with the necessary libraries (e.g., NumPy). Import `cheby.py` to execute the software simulation. Use the fit function followed by the asTaylor function to obtain the coefficients. Next, used the `float2fixed.py` with the generated coefficients to obtain them in hexadecimal format to be inputted to `ChebyshevOptimized.sv`. Modify the script as needed to adjust parameters and analyze results.
 
 ### Hardware Implementation
-To use the hardware implementation, you need a SystemVerilog compiler and a hardware description language (HDL) compatible toolchain. Simply include `chebyshev_design.sv` in your project and instantiate the module as required.
+To use the hardware implementation, you need a SystemVerilog compiler and a hardware description language (HDL) compatible toolchain. Simply include `ChebyshevOptimized.sv` in your project and instantiate the module as required. We also included top_level files.
 
 ## Contributing
 
